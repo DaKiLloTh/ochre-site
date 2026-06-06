@@ -9,7 +9,7 @@ export function Primitives() {
             <code class="font-mono text-primary bg-base-300 px-1.5 py-0.5 rounded">
               Readable
             </code>{" "}
-            and interpolate directly in templates. Three are structural — they
+            and interpolate directly in templates. Three are structural: they
             drive async data, mutations, and lists.
           </p>
         </div>
@@ -19,7 +19,7 @@ export function Primitives() {
           <div class="flex items-center gap-3 mb-4">
             <div class="h-px flex-1 bg-base-300" />
             <span class="text-xs font-mono text-base-content/40 uppercase tracking-widest">
-              implements Readable — use in {"{{ }}"}
+              implements Readable - use in {"{{ }}"}
             </span>
             <div class="h-px flex-1 bg-base-300" />
           </div>
@@ -130,7 +130,7 @@ export function Primitives() {
           <div class="flex items-center gap-3 mb-4">
             <div class="h-px flex-1 bg-base-300" />
             <span class="text-xs font-mono text-base-content/40 uppercase tracking-widest">
-              structural — async, mutations, lists
+              structural - async, mutations, lists
             </span>
             <div class="h-px flex-1 bg-base-300" />
           </div>

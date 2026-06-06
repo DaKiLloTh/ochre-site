@@ -17,8 +17,8 @@ export function Cta() {
         <h2 class="text-3xl font-bold">Follow along</h2>
         <p class="text-primary-content/80">
           Ochre is in active early development. Star the repo to follow
-          progress. The v0.1 proof of concept — a counter that SSRs and
-          hydrates in WASM — is the first milestone.
+          progress. The v0.1 proof of concept, a counter that SSRs and
+          hydrates in WASM, is the first milestone.
         </p>
         <div class="flex gap-4 justify-center">
           <a

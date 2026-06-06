@@ -10,8 +10,7 @@ export function Hero() {
 
         <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl leading-tight">
           The Rust web framework for{" "}
-          <span class="text-primary">Angular and Vue</span>{" "}
-          developers.
+          <span class="text-primary">Angular and Vue</span> developers.
         </h1>
 
         <p class="text-xl text-base-content/70 max-w-2xl leading-relaxed">

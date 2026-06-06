@@ -4,9 +4,11 @@ Marketing site for the Ochre Rust web framework.
 
 ## Stack
 
-- **Deno Fresh 2** — SSR, file-system routing, `routes/`, no islands (static site)
+- **Deno Fresh 2** — SSR, file-system routing, `routes/`, no islands (static
+  site)
 - **DaisyUI 5** — component classes, semantic colour modifiers
-- **Tailwind CSS 4** — `@import "tailwindcss"` + `@plugin "daisyui"` in `assets/styles.css`
+- **Tailwind CSS 4** — `@import "tailwindcss"` + `@plugin "daisyui"` in
+  `assets/styles.css`
 - **Preact** — JSX precompile mode (`jsxImportSource: "preact"` in `deno.json`)
 
 ## Commands
@@ -18,8 +20,8 @@ deno task build       # production build → _fresh/
 deno task start       # serve production build on :8000
 ```
 
-Always use `deno task build && deno task start` to verify visual changes.
-The dev server has CSS FOUC — production build is the source of truth.
+Always use `deno task build && deno task start` to verify visual changes. The
+dev server has CSS FOUC — production build is the source of truth.
 
 ## Project structure
 
@@ -47,6 +49,7 @@ assets/
 Use DaisyUI semantic colour modifiers. Never write raw colour utilities.
 
 Good:
+
 ```
 badge badge-primary badge-outline
 btn btn-primary btn-outline
@@ -56,6 +59,7 @@ text-neutral-content/40
 ```
 
 Bad:
+
 ```
 text-primary border-primary        (use badge-primary instead)
 btn btn-outline                    (missing colour modifier)
@@ -63,7 +67,8 @@ bg-white text-primary              (hardcoded, not semantic)
 bg-gray-800                        (not a DaisyUI token)
 ```
 
-Text on a dark surface (`bg-neutral`) must use `text-neutral-content` (or `/opacity`), not `text-base-content`.
+Text on a dark surface (`bg-neutral`) must use `text-neutral-content` (or
+`/opacity`), not `text-base-content`.
 
 ## Copy rules
 
@@ -71,7 +76,8 @@ Text on a dark surface (`bg-neutral`) must use `text-neutral-content` (or `/opac
 
 ## Branching
 
-GitHub Flow — branch → PR → merge into `main`. Direct pushes to `main` are blocked.
+GitHub Flow — branch → PR → merge into `main`. Direct pushes to `main` are
+blocked.
 
 ## CSS resolution (why two `deno i` installs are needed)
 

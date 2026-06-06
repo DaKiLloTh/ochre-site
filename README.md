@@ -1,13 +1,16 @@
 # ochre-site
 
-Marketing site for the [Ochre](https://github.com/DaKiLloTh/ochre) Rust web framework.
+Marketing site for the [Ochre](https://github.com/DaKiLloTh/ochre) Rust web
+framework.
 
-Built with [Deno Fresh 2](https://fresh.deno.dev), [DaisyUI 5](https://daisyui.com), and [Tailwind CSS 4](https://tailwindcss.com).
+Built with [Deno Fresh 2](https://fresh.deno.dev),
+[DaisyUI 5](https://daisyui.com), and [Tailwind CSS 4](https://tailwindcss.com).
 
 ## Stack
 
 - **Framework** — Deno Fresh 2 (SSR, file-system routing)
-- **Styling** — DaisyUI 5 + Tailwind CSS 4, custom ochre/umber theme via `@plugin "daisyui/theme"`
+- **Styling** — DaisyUI 5 + Tailwind CSS 4, custom ochre/umber theme via
+  `@plugin "daisyui/theme"`
 - **Language** — TypeScript + Preact (JSX precompile mode)
 - **Deploy** — Deno Deploy (via GitHub Actions)
 
@@ -60,7 +63,8 @@ assets/
 
 ## Branching
 
-GitHub Flow — all work on feature branches, PRs into `main`. Direct pushes to `main` are blocked.
+GitHub Flow — all work on feature branches, PRs into `main`. Direct pushes to
+`main` are blocked.
 
 ## Related
 

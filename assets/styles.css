@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
@@ -5,36 +6,35 @@
   default: true;
   color-scheme: light;
 
-  /* Primary: Ochre — the classic iron-oxide yellow-gold pigment */
+  /* Primary: Ochre — iron-oxide yellow-gold */
   --color-primary: oklch(62% 0.18 78);
   --color-primary-content: oklch(14% 0.04 78);
 
-  /* Secondary: Prussian Blue — deep, almost-black blue; the cool counterpoint */
-  --color-secondary: oklch(34% 0.14 250);
-  --color-secondary-content: oklch(95% 0.01 250);
+  /* Secondary: Steel Blue — light enough to read on dark neutral surfaces */
+  --color-secondary: oklch(65% 0.15 250);
+  --color-secondary-content: oklch(12% 0.04 250);
 
-  /* Accent: Burnt Sienna — warm reddish-brown, bridges ochre and umber */
-  --color-accent: oklch(52% 0.14 48);
-  --color-accent-content: oklch(97% 0 0);
+  /* Accent: Warm Amber — bright enough to read on dark neutral surfaces */
+  --color-accent: oklch(72% 0.16 68);
+  --color-accent-content: oklch(14% 0.05 68);
 
-  /* Neutral: Raw Umber — deep warm gray-brown for surfaces and dark UI */
+  /* Neutral: Raw Umber — code block and dark surface background */
   --color-neutral: oklch(24% 0.07 62);
   --color-neutral-content: oklch(94% 0.01 78);
 
-  /* Base: Warm parchment / stone — aged paper, not cold white */
+  /* Base: warm parchment / aged paper */
   --color-base-100: oklch(97% 0.01 82);
   --color-base-200: oklch(91% 0.02 78);
   --color-base-300: oklch(84% 0.03 72);
   --color-base-content: oklch(20% 0.06 62);
 
-  /* Semantic: keep in the same warm-earthy register */
-  --color-info: oklch(52% 0.12 235);
+  --color-info: oklch(65% 0.14 235);
   --color-info-content: oklch(97% 0 0);
-  --color-success: oklch(50% 0.13 155);
+  --color-success: oklch(60% 0.15 155);
   --color-success-content: oklch(97% 0 0);
   --color-warning: oklch(72% 0.18 78);
   --color-warning-content: oklch(14% 0.04 78);
-  --color-error: oklch(52% 0.20 22);
+  --color-error: oklch(62% 0.20 22);
   --color-error-content: oklch(97% 0 0);
 
   --radius-field: 0.25rem;

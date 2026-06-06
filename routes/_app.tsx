@@ -17,7 +17,7 @@ export default define.page(function App({ Component }) {
           content="Adjacent file components. Struct-based reactivity. One CLI."
         />
         <meta property="og:type" content="website" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body class="bg-base-100 text-base-content">
         <Component />

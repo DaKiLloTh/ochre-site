@@ -13,7 +13,7 @@ export function Cta() {
         <div class="flex gap-4 justify-center">
           <a
             href="https://github.com/DaKiLloTh/ochre"
-            class="btn btn-lg bg-primary-content text-primary hover:bg-primary-content/90 border-0 gap-2"
+            class="btn btn-neutral btn-lg gap-2"
             target="_blank"
             rel="noopener noreferrer"
           >

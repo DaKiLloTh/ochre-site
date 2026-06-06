@@ -3,7 +3,7 @@ import { GithubIcon } from "./GithubIcon.tsx";
 export function Hero() {
   return (
     <section class="flex-1 flex flex-col items-center justify-center text-center px-6 py-24 gap-6">
-      <div class="badge badge-outline badge-lg text-primary border-primary font-mono">
+      <div class="badge badge-primary badge-outline badge-lg font-mono">
         early development · v0.1 in progress
       </div>
 
@@ -30,7 +30,7 @@ export function Hero() {
         </a>
         <a
           href="https://github.com/DaKiLloTh/ochre-rfcs"
-          class="btn btn-outline btn-lg"
+          class="btn btn-primary btn-outline btn-lg"
           target="_blank"
           rel="noopener noreferrer"
         >

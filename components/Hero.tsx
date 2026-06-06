@@ -2,8 +2,8 @@ import { GithubIcon } from "./GithubIcon.tsx";
 
 export function Hero() {
   return (
-    <section class="hero flex-1 py-24 px-6">
-      <div class="hero-content flex-col text-center gap-6">
+    <section class="flex-1 flex flex-col items-center justify-center text-center px-6 py-24 gap-6">
+      <div class="flex flex-col items-center gap-6">
         <div class="badge badge-primary badge-outline badge-lg font-mono">
           early development · v0.1 in progress
         </div>
@@ -38,7 +38,6 @@ export function Hero() {
             Read the RFCs
           </a>
         </div>
-      </div>
     </section>
   );
 }

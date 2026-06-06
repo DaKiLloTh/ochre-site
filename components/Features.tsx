@@ -17,7 +17,7 @@ const FEATURES: Feature[] = [
     title: "Struct-based components",
     body: "State lives in struct fields, not scattered hook calls. The type signature tells you everything about a component.",
     snippet: (
-      <div class="mockup-code text-xs mt-1">
+      <div class="mockup-code text-xs! mt-1">
         <pre><code><span class="text-secondary">#[component]</span></code></pre>
         <pre><code><span class="text-accent">pub struct</span>{" Counter {"}</code></pre>
         <pre><code>{"  count: "}<span class="text-primary">Signal</span>{"<u32>,"}</code></pre>
@@ -35,7 +35,7 @@ const FEATURES: Feature[] = [
     title: "Seven reactive primitives",
     body: "Signal, Derived, Resource, Action, SignalVec, ServerSignal, LiveSignal. Each has one job. No more, no less.",
     snippet: (
-      <div class="mockup-code text-xs mt-1">
+      <div class="mockup-code text-xs! mt-1">
         <pre><code><span class="text-primary">{"Signal     "}</span><span class="text-neutral-content/40">{"// reactive value"}</span></code></pre>
         <pre><code><span class="text-primary">{"Derived    "}</span><span class="text-neutral-content/40">{"// computed"}</span></code></pre>
         <pre><code><span class="text-primary">{"Resource   "}</span><span class="text-neutral-content/40">{"// async data"}</span></code></pre>
@@ -55,7 +55,7 @@ const FEATURES: Feature[] = [
     title: "Compile-time correctness",
     body: "Template errors are compile errors. Reference a non-signal field in a template and the build fails with a clear message.",
     snippet: (
-      <div class="mockup-code text-xs mt-1">
+      <div class="mockup-code text-xs! mt-1">
         <pre class="text-error"><code>{"error: `name` is not Readable"}</code></pre>
         <pre><code class="text-neutral-content/40">{" --> greeting.html:2"}</code></pre>
         <pre><code class="text-neutral-content/40">{"  |"}</code></pre>
@@ -76,7 +76,7 @@ const FEATURES: Feature[] = [
     title: "Transparent DB compilation",
     body: "Write one db:: call. The server build hits Postgres via SQLx. The WASM build becomes an RPC stub. You write neither.",
     snippet: (
-      <div class="mockup-code text-xs mt-1">
+      <div class="mockup-code text-xs! mt-1">
         <pre><code class="text-neutral-content/40">{"// one call, two targets:"}</code></pre>
         <pre><code><span class="text-accent">{"let "}</span><span class="text-neutral-content">{"users"}</span>{" = "}<span class="text-primary">{"db::all"}</span>{"::< "}<span class="text-secondary">{"User"}</span>{" >()"}</code></pre>
         <pre><code class="text-neutral-content/60">{"    .await?;"}</code></pre>
@@ -95,7 +95,7 @@ const FEATURES: Feature[] = [
     title: "One command",
     body: "umber dev. That's it. No cargo, no wasm-pack, no trunk. Umber orchestrates everything and gets out of your way.",
     snippet: (
-      <div class="mockup-code text-xs mt-1">
+      <div class="mockup-code text-xs! mt-1">
         <pre data-prefix="$"><code><span class="text-accent">umber dev</span></code></pre>
         <pre class="text-success"><code>{"  ✓ server  127ms"}</code></pre>
         <pre class="text-success"><code>{"  ✓ wasm    2.1s"}</code></pre>
@@ -127,7 +127,7 @@ export function Features() {
               <p class="text-sm text-base-content/70">
                 No import paths. No boilerplate. Your editor's HTML tooling works exactly as expected.
               </p>
-              <div class="mockup-code text-xs mt-1">
+              <div class="mockup-code text-xs! mt-1">
                 <pre><code class="text-neutral-content/40">src/counter/</code></pre>
                 <pre><code>{"  ├─ counter"}<span class="text-accent">.rs</span></code></pre>
                 <pre><code>{"  ├─ counter"}<span class="text-secondary">.html</span></code></pre>

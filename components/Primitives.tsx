@@ -30,8 +30,8 @@ export function Primitives() {
                   Local reactive value. The core building block.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code><span class="text-accent">let</span>{" count = "}<span class="text-primary">Signal</span>{"::new(0_u32);"}</code></pre>
-                  <pre><code>{"count.set(count.get() + 1);"}</code></pre>
+                  <pre><code><span class="text-accent">let</span> count = <span class="text-primary">Signal</span>::new(0_u32);</code></pre>
+                  <pre><code>count.set(count.get() + 1);</code></pre>
                   <pre><code class="text-neutral-content/40">{"// {{ count }}"}</code></pre>
                 </div>
               </div>
@@ -47,9 +47,9 @@ export function Primitives() {
                   Computed value. Re-runs when its signals change.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code><span class="text-accent">let</span>{" doubled = "}<span class="text-primary">Derived</span>{"::new("}</code></pre>
-                  <pre><code>{"  || count.get() * 2"}</code></pre>
-                  <pre><code>{");"}</code></pre>
+                  <pre><code><span class="text-accent">let</span> doubled = <span class="text-primary">Derived</span>::new(</code></pre>
+                  <pre><code>  || count.get() * 2</code></pre>
+                  <pre><code>);</code></pre>
                   <pre><code class="text-neutral-content/40">{"// {{ doubled }}"}</code></pre>
                 </div>
               </div>
@@ -65,9 +65,9 @@ export function Primitives() {
                   Server sets it, client reads it. SSR-safe push.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code class="text-neutral-content/40">{"// server:"}</code></pre>
-                  <pre><code><span class="text-accent">let</span>{" n: "}<span class="text-secondary">{"ServerSignal<u32>"}</span></code></pre>
-                  <pre><code>{"  = ctx.signal(\"online\");"}</code></pre>
+                  <pre><code class="text-neutral-content/40">// server:</code></pre>
+                  <pre><code><span class="text-accent">let</span> n: <span class="text-secondary">{"ServerSignal<u32>"}</span></code></pre>
+                  <pre><code>  = ctx.signal("online");</code></pre>
                   <pre><code class="text-neutral-content/40">{"// {{ n }}"}</code></pre>
                 </div>
               </div>
@@ -83,10 +83,10 @@ export function Primitives() {
                   WebSocket stream as a readable signal.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code><span class="text-accent">let</span>{" price:"}</code></pre>
-                  <pre><code>{"  "}<span class="text-secondary">{"LiveSignal<f64>"}</span></code></pre>
-                  <pre><code>{"  = LiveSignal"}</code></pre>
-                  <pre><code>{"    ::connect(\"/ws/btc\");"}</code></pre>
+                  <pre><code><span class="text-accent">let</span> price:</code></pre>
+                  <pre><code>  <span class="text-secondary">{"LiveSignal<f64>"}</span></code></pre>
+                  <pre><code>  = LiveSignal</code></pre>
+                  <pre><code>    ::connect("/ws/btc");</code></pre>
                   <pre><code class="text-neutral-content/40">{"// {{ price }}"}</code></pre>
                 </div>
               </div>
@@ -111,12 +111,12 @@ export function Primitives() {
                   <code class="text-accent/80">{"<Suspense>"}</code>.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code><span class="text-accent">let</span>{" user = "}<span class="text-primary">Resource</span>{"::new("}</code></pre>
+                  <pre><code><span class="text-accent">let</span> user = <span class="text-primary">Resource</span>::new(</code></pre>
                   <pre><code>{"  || async {"}</code></pre>
-                  <pre><code>{"    "}<span class="text-primary">api</span>{"::get::<"}<span class="text-secondary">User</span>{">"}</code></pre>
-                  <pre><code>{"    (\"/me\").await"}</code></pre>
+                  <pre><code>    <span class="text-primary">api</span>{"::get::<"}<span class="text-secondary">User</span>{">"}</code></pre>
+                  <pre><code>    ("/me").await</code></pre>
                   <pre><code>{"  }"}</code></pre>
-                  <pre><code>{");"}</code></pre>
+                  <pre><code>);</code></pre>
                 </div>
               </div>
             </div>
@@ -131,12 +131,12 @@ export function Primitives() {
                   Server mutation. Triggered by events, not templates.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code><span class="text-accent">let</span>{" save = "}<span class="text-primary">Action</span>{"::new("}</code></pre>
+                  <pre><code><span class="text-accent">let</span> save = <span class="text-primary">Action</span>::new(</code></pre>
                   <pre><code>{"  || async {"}</code></pre>
-                  <pre><code>{"    "}<span class="text-primary">api</span>{"::post(\"/save\","}</code></pre>
-                  <pre><code>{"      form).await"}</code></pre>
+                  <pre><code>    <span class="text-primary">api</span>::post("/save",</code></pre>
+                  <pre><code>      form).await</code></pre>
                   <pre><code>{"  }"}</code></pre>
-                  <pre><code>{");"}</code></pre>
+                  <pre><code>);</code></pre>
                 </div>
               </div>
             </div>
@@ -153,11 +153,11 @@ export function Primitives() {
                   re-render.
                 </p>
                 <div class="mockup-code text-xs! mt-1">
-                  <pre><code><span class="text-accent">let</span>{" todos ="}</code></pre>
-                  <pre><code>{"  "}<span class="text-primary">SignalVec</span>{"::< "}<span class="text-secondary">Todo</span>{" >::new();"}</code></pre>
-                  <pre><code>{"todos.push("}</code></pre>
-                  <pre><code>{"  "}<span class="text-primary">Todo</span>{"::new(\"Buy milk\")"}</code></pre>
-                  <pre><code>{");"}</code></pre>
+                  <pre><code><span class="text-accent">let</span> todos =</code></pre>
+                  <pre><code>  <span class="text-primary">SignalVec</span>{"::< "}<span class="text-secondary">Todo</span>{" >::new();"}</code></pre>
+                  <pre><code>todos.push(</code></pre>
+                  <pre><code>  <span class="text-primary">Todo</span>::new("Buy milk")</code></pre>
+                  <pre><code>);</code></pre>
                 </div>
               </div>
             </div>

@@ -31,8 +31,8 @@ const FEATURES: Feature[] = [
       <div class="mockup-code text-xs! mt-1">
         <pre><code><span class="text-secondary">#[component]</span></code></pre>
         <pre><code><span class="text-accent">pub struct</span>{" Counter {"}</code></pre>
-        <pre><code>{"  count: "}<span class="text-primary">Signal</span>{"<u32>,"}</code></pre>
-        <pre><code>{"  label: "}<span class="text-primary">String</span>{","}</code></pre>
+        <pre><code>  count: <span class="text-primary">Signal</span>{"<u32>,"}</code></pre>
+        <pre><code>  label: <span class="text-primary">String</span>,</code></pre>
         <pre><code>{"}"}</code></pre>
       </div>
     ),
@@ -58,13 +58,13 @@ const FEATURES: Feature[] = [
       "Signal, Derived, Resource, Action, SignalVec, ServerSignal, LiveSignal. Each has one job. No more, no less.",
     snippet: (
       <div class="mockup-code text-xs! mt-1">
-        <pre><code><span class="text-primary">{"Signal     "}</span><span class="text-neutral-content/40">{"// reactive value"}</span></code></pre>
-        <pre><code><span class="text-primary">{"Derived    "}</span><span class="text-neutral-content/40">{"// computed"}</span></code></pre>
-        <pre><code><span class="text-primary">{"Resource   "}</span><span class="text-neutral-content/40">{"// async data"}</span></code></pre>
-        <pre><code><span class="text-primary">{"Action     "}</span><span class="text-neutral-content/40">{"// mutation"}</span></code></pre>
-        <pre><code><span class="text-primary">{"SignalVec  "}</span><span class="text-neutral-content/40">{"// reactive list"}</span></code></pre>
-        <pre><code><span class="text-secondary">{"ServerSignal"}</span><span class="text-neutral-content/40">{" // server push"}</span></code></pre>
-        <pre><code><span class="text-secondary">{"LiveSignal  "}</span><span class="text-neutral-content/40">{" // WebSocket"}</span></code></pre>
+        <pre><code><span class="text-primary">Signal     </span><span class="text-neutral-content/40">// reactive value</span></code></pre>
+        <pre><code><span class="text-primary">Derived    </span><span class="text-neutral-content/40">// computed</span></code></pre>
+        <pre><code><span class="text-primary">Resource   </span><span class="text-neutral-content/40">// async data</span></code></pre>
+        <pre><code><span class="text-primary">Action     </span><span class="text-neutral-content/40">// mutation</span></code></pre>
+        <pre><code><span class="text-primary">SignalVec  </span><span class="text-neutral-content/40">// reactive list</span></code></pre>
+        <pre><code><span class="text-secondary">ServerSignal</span><span class="text-neutral-content/40"> // server push</span></code></pre>
+        <pre><code><span class="text-secondary">LiveSignal  </span><span class="text-neutral-content/40"> // WebSocket</span></code></pre>
       </div>
     ),
   },
@@ -89,11 +89,11 @@ const FEATURES: Feature[] = [
       "Template errors are compile errors. Reference a non-signal field in a template and the build fails with a clear message.",
     snippet: (
       <div class="mockup-code text-xs! mt-1">
-        <pre class="text-error"><code>{"error: `name` is not Readable"}</code></pre>
+        <pre class="text-error"><code>error: `name` is not Readable</code></pre>
         <pre><code class="text-neutral-content/40">{" --> greeting.html:2"}</code></pre>
-        <pre><code class="text-neutral-content/40">{"  |"}</code></pre>
+        <pre><code class="text-neutral-content/40">  |</code></pre>
         <pre data-prefix="2"><code>{"{{ name }}"}</code></pre>
-        <pre><code><span class="text-neutral-content/40">{"  |    "}</span><span class="text-warning">{"^^^^ use Signal<String>"}</span></code></pre>
+        <pre><code><span class="text-neutral-content/40">  |    </span><span class="text-warning">{"^^^^ use Signal<String>"}</span></code></pre>
       </div>
     ),
   },
@@ -117,12 +117,12 @@ const FEATURES: Feature[] = [
       "Write one db:: call. The server build hits Postgres via SQLx. The WASM build becomes an RPC stub. You write neither.",
     snippet: (
       <div class="mockup-code text-xs! mt-1">
-        <pre><code class="text-neutral-content/40">{"// one call, two targets:"}</code></pre>
-        <pre><code><span class="text-accent">{"let "}</span><span class="text-neutral-content">{"users"}</span>{" = "}<span class="text-primary">{"db::all"}</span>{"::< "}<span class="text-secondary">{"User"}</span>{" >()"}</code></pre>
-        <pre><code class="text-neutral-content/60">{"    .await?;"}</code></pre>
+        <pre><code class="text-neutral-content/40">// one call, two targets:</code></pre>
+        <pre><code><span class="text-accent">let </span><span class="text-neutral-content">users</span> = <span class="text-primary">db::all</span>{"::< "}<span class="text-secondary">User</span>{" >()"}</code></pre>
+        <pre><code class="text-neutral-content/60">    .await?;</code></pre>
         <pre><code></code></pre>
-        <pre><code class="text-neutral-content/40">{"// server  SQLx + Postgres"}</code></pre>
-        <pre><code class="text-neutral-content/40">{"// wasm    generated RPC stub"}</code></pre>
+        <pre><code class="text-neutral-content/40">// server  SQLx + Postgres</code></pre>
+        <pre><code class="text-neutral-content/40">// wasm    generated RPC stub</code></pre>
       </div>
     ),
   },
@@ -148,9 +148,9 @@ const FEATURES: Feature[] = [
     snippet: (
       <div class="mockup-code text-xs! mt-1">
         <pre data-prefix="$"><code><span class="text-accent">umber dev</span></code></pre>
-        <pre class="text-success"><code>{"  ✓ server  127ms"}</code></pre>
-        <pre class="text-success"><code>{"  ✓ wasm    2.1s"}</code></pre>
-        <pre><code>{"  → "}<span class="text-secondary">{"localhost:3000"}</span></code></pre>
+        <pre class="text-success"><code>  ✓ server  127ms</code></pre>
+        <pre class="text-success"><code>  ✓ wasm    2.1s</code></pre>
+        <pre><code>  → <span class="text-secondary">localhost:3000</span></code></pre>
       </div>
     ),
   },
@@ -186,9 +186,9 @@ export function Features() {
               </p>
               <div class="mockup-code text-xs! mt-1">
                 <pre><code class="text-neutral-content/40">src/counter/</code></pre>
-                <pre><code>{"  ├─ counter"}<span class="text-accent">.rs</span></code></pre>
-                <pre><code>{"  ├─ counter"}<span class="text-secondary">.html</span></code></pre>
-                <pre><code>{"  └─ counter"}<span class="text-primary">.css</span></code></pre>
+                <pre><code>  ├─ counter<span class="text-accent">.rs</span></code></pre>
+                <pre><code>  ├─ counter<span class="text-secondary">.html</span></code></pre>
+                <pre><code>  └─ counter<span class="text-primary">.css</span></code></pre>
               </div>
             </div>
           </div>

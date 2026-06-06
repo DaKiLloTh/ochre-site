@@ -15,12 +15,12 @@ export function CodeExample() {
             <pre><code>{"}"}</code></pre>
             <pre><code></code></pre>
             <pre><code>{"impl Counter {"}</code></pre>
-            <pre><code>{"  fn increment("}</code></pre>
-            <pre><code>{"    &mut self"}</code></pre>
+            <pre><code>  fn increment(</code></pre>
+            <pre><code>    &mut self</code></pre>
             <pre><code>{"  ) {"}</code></pre>
-            <pre><code>{"    self.count.set("}</code></pre>
-            <pre><code>{"      self.count.get() + 1"}</code></pre>
-            <pre><code>{"    );"}</code></pre>
+            <pre><code>    self.count.set(</code></pre>
+            <pre><code>      self.count.get() + 1</code></pre>
+            <pre><code>    );</code></pre>
             <pre><code>{"  }"}</code></pre>
             <pre><code>{"}"}</code></pre>
           </div>
@@ -29,9 +29,9 @@ export function CodeExample() {
             <pre><code></code></pre>
             <pre><code>{"<div class=\"counter\">"}</code></pre>
             <pre><code>{"  <button"}</code></pre>
-            <pre><code>{"    (click)=\"increment\""}</code></pre>
+            <pre><code>    (click)="increment"</code></pre>
             <pre><code>{"  >"}</code></pre>
-            <pre><code>{"    +"}</code></pre>
+            <pre><code>    +</code></pre>
             <pre><code>{"  </button>"}</code></pre>
             <pre><code>{"  <p>{{ count }}</p>"}</code></pre>
             <pre><code>{"</div>"}</code></pre>
@@ -40,13 +40,13 @@ export function CodeExample() {
             <pre><code class="text-accent">// counter.css</code></pre>
             <pre><code></code></pre>
             <pre><code>{".counter {"}</code></pre>
-            <pre><code>{"  display: flex;"}</code></pre>
-            <pre><code>{"  align-items: center;"}</code></pre>
-            <pre><code>{"  gap: 1rem;"}</code></pre>
+            <pre><code>  display: flex;</code></pre>
+            <pre><code>  align-items: center;</code></pre>
+            <pre><code>  gap: 1rem;</code></pre>
             <pre><code>{"}"}</code></pre>
             <pre><code></code></pre>
-            <pre><code class="text-neutral-content/40">{"/* scoped automatically */"}</code></pre>
-            <pre><code class="text-neutral-content/40">{"/* by ochre-macros */"}</code></pre>
+            <pre><code class="text-neutral-content/40">/* scoped automatically */</code></pre>
+            <pre><code class="text-neutral-content/40">/* by ochre-macros */</code></pre>
           </div>
         </div>
         <p class="text-center text-base-content/50 mt-6 text-sm">

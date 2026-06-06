@@ -38,6 +38,7 @@ export function Hero() {
             Read the RFCs
           </a>
         </div>
+      </div>
     </section>
   );
 }

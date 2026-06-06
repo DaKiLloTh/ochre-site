@@ -17,12 +17,12 @@ const FEATURES: Feature[] = [
     title: "Struct-based components",
     body: "State lives in struct fields, not scattered hook calls. The type signature tells you everything about a component.",
     snippet: (
-      <div class="bg-neutral rounded-box p-3 font-mono text-xs text-neutral-content mt-1 leading-relaxed">
-        <div><span class="text-secondary">#[component]</span></div>
-        <div><span class="text-accent">pub struct</span>{" Counter {"}</div>
-        <div class="pl-4"><span class="text-neutral-content">count</span>{": "}<span class="text-primary">Signal</span>{"<u32>,"}</div>
-        <div class="pl-4"><span class="text-neutral-content">label</span>{": "}<span class="text-primary">String</span>{","}</div>
-        <div>{"}"}</div>
+      <div class="mockup-code text-xs mt-1">
+        <pre><code><span class="text-secondary">#[component]</span></code></pre>
+        <pre><code><span class="text-accent">pub struct</span>{" Counter {"}</code></pre>
+        <pre><code>{"  count: "}<span class="text-primary">Signal</span>{"<u32>,"}</code></pre>
+        <pre><code>{"  label: "}<span class="text-primary">String</span>{","}</code></pre>
+        <pre><code>{"}"}</code></pre>
       </div>
     ),
   },
@@ -35,14 +35,14 @@ const FEATURES: Feature[] = [
     title: "Seven reactive primitives",
     body: "Signal, Derived, Resource, Action, SignalVec, ServerSignal, LiveSignal. Each has one job. No more, no less.",
     snippet: (
-      <div class="bg-neutral rounded-box p-3 font-mono text-xs mt-1 leading-loose">
-        <div><span class="text-primary">Signal</span><span class="text-neutral-content/40">{"<T>"}{"         "}</span><span class="text-neutral-content/40">{"// reactive value"}</span></div>
-        <div><span class="text-primary">Derived</span><span class="text-neutral-content/40">{"<T>"}{"        "}</span><span class="text-neutral-content/40">{"// computed"}</span></div>
-        <div><span class="text-primary">Resource</span><span class="text-neutral-content/40">{"<T>"}{"       "}</span><span class="text-neutral-content/40">{"// async data"}</span></div>
-        <div><span class="text-primary">Action</span><span class="text-neutral-content/40">{"<I,O>"}{"      "}</span><span class="text-neutral-content/40">{"// mutation"}</span></div>
-        <div><span class="text-primary">SignalVec</span><span class="text-neutral-content/40">{"<T>"}{"     "}</span><span class="text-neutral-content/40">{"// reactive list"}</span></div>
-        <div><span class="text-secondary">ServerSignal</span><span class="text-neutral-content/40">{"<T>"}{"  "}</span><span class="text-neutral-content/40">{"// server push"}</span></div>
-        <div><span class="text-secondary">LiveSignal</span><span class="text-neutral-content/40">{"<T>"}{"    "}</span><span class="text-neutral-content/40">{"// WebSocket"}</span></div>
+      <div class="mockup-code text-xs mt-1">
+        <pre><code><span class="text-primary">{"Signal     "}</span><span class="text-neutral-content/40">{"// reactive value"}</span></code></pre>
+        <pre><code><span class="text-primary">{"Derived    "}</span><span class="text-neutral-content/40">{"// computed"}</span></code></pre>
+        <pre><code><span class="text-primary">{"Resource   "}</span><span class="text-neutral-content/40">{"// async data"}</span></code></pre>
+        <pre><code><span class="text-primary">{"Action     "}</span><span class="text-neutral-content/40">{"// mutation"}</span></code></pre>
+        <pre><code><span class="text-primary">{"SignalVec  "}</span><span class="text-neutral-content/40">{"// reactive list"}</span></code></pre>
+        <pre><code><span class="text-secondary">{"ServerSignal"}</span><span class="text-neutral-content/40">{" // server push"}</span></code></pre>
+        <pre><code><span class="text-secondary">{"LiveSignal  "}</span><span class="text-neutral-content/40">{" // WebSocket"}</span></code></pre>
       </div>
     ),
   },
@@ -55,12 +55,12 @@ const FEATURES: Feature[] = [
     title: "Compile-time correctness",
     body: "Template errors are compile errors. Reference a non-signal field in a template and the build fails with a clear message.",
     snippet: (
-      <div class="bg-neutral rounded-box p-3 font-mono text-xs mt-1 leading-relaxed">
-        <div class="text-error">{"error: `name` is not Readable"}</div>
-        <div class="text-neutral-content/40">{" --> greeting.html:2"}</div>
-        <div class="text-neutral-content/40">{"  |"}</div>
-        <div><span class="text-neutral-content/40">{"2 | "}</span><span class="text-neutral-content">{"{{ name }}"}</span></div>
-        <div><span class="text-neutral-content/40">{"  |    "}</span><span class="text-warning">{"^^^^ use Signal<String>"}</span></div>
+      <div class="mockup-code text-xs mt-1">
+        <pre class="text-error"><code>{"error: `name` is not Readable"}</code></pre>
+        <pre><code class="text-neutral-content/40">{" --> greeting.html:2"}</code></pre>
+        <pre><code class="text-neutral-content/40">{"  |"}</code></pre>
+        <pre data-prefix="2"><code>{"{{ name }}"}</code></pre>
+        <pre><code><span class="text-neutral-content/40">{"  |    "}</span><span class="text-warning">{"^^^^ use Signal<String>"}</span></code></pre>
       </div>
     ),
   },
@@ -76,20 +76,13 @@ const FEATURES: Feature[] = [
     title: "Transparent DB compilation",
     body: "Write one db:: call. The server build hits Postgres via SQLx. The WASM build becomes an RPC stub. You write neither.",
     snippet: (
-      <div class="bg-neutral rounded-box p-3 font-mono text-xs mt-1 leading-relaxed">
-        <div class="text-neutral-content/40">{"// one call, two targets:"}</div>
-        <div>
-          <span class="text-accent">{"let "}</span>
-          <span class="text-neutral-content">{"users"}</span>
-          <span class="text-neutral-content/60">{" = "}</span>
-          <span class="text-primary">{"db::all"}</span>
-          <span class="text-neutral-content/60">{"::< "}</span>
-          <span class="text-secondary">{"User"}</span>
-          <span class="text-neutral-content/60">{" >()"}</span>
-        </div>
-        <div class="pl-4 text-neutral-content/60">{".await?;"}</div>
-        <div class="mt-2 text-neutral-content/40">{"// server → SQLx + Postgres"}</div>
-        <div class="text-neutral-content/40">{"// wasm   → generated RPC stub"}</div>
+      <div class="mockup-code text-xs mt-1">
+        <pre><code class="text-neutral-content/40">{"// one call, two targets:"}</code></pre>
+        <pre><code><span class="text-accent">{"let "}</span><span class="text-neutral-content">{"users"}</span>{" = "}<span class="text-primary">{"db::all"}</span>{"::< "}<span class="text-secondary">{"User"}</span>{" >()"}</code></pre>
+        <pre><code class="text-neutral-content/60">{"    .await?;"}</code></pre>
+        <pre><code></code></pre>
+        <pre><code class="text-neutral-content/40">{"// server  SQLx + Postgres"}</code></pre>
+        <pre><code class="text-neutral-content/40">{"// wasm    generated RPC stub"}</code></pre>
       </div>
     ),
   },
@@ -102,22 +95,11 @@ const FEATURES: Feature[] = [
     title: "One command",
     body: "umber dev. That's it. No cargo, no wasm-pack, no trunk. Umber orchestrates everything and gets out of your way.",
     snippet: (
-      <div class="bg-neutral rounded-box p-3 font-mono text-xs mt-1 leading-relaxed">
-        <div><span class="text-neutral-content/40">{"$ "}</span><span class="text-accent">{"umber dev"}</span></div>
-        <div class="mt-1">
-          <span class="text-success">{"  ✓ "}</span>
-          <span class="text-neutral-content">{"server  "}</span>
-          <span class="text-neutral-content/40">{"127ms"}</span>
-        </div>
-        <div>
-          <span class="text-success">{"  ✓ "}</span>
-          <span class="text-neutral-content">{"wasm    "}</span>
-          <span class="text-neutral-content/40">{"2.1s"}</span>
-        </div>
-        <div class="mt-1">
-          <span class="text-neutral-content/40">{"  → "}</span>
-          <span class="text-secondary">{"localhost:3000"}</span>
-        </div>
+      <div class="mockup-code text-xs mt-1">
+        <pre data-prefix="$"><code><span class="text-accent">umber dev</span></code></pre>
+        <pre class="text-success"><code>{"  ✓ server  127ms"}</code></pre>
+        <pre class="text-success"><code>{"  ✓ wasm    2.1s"}</code></pre>
+        <pre><code>{"  → "}<span class="text-secondary">{"localhost:3000"}</span></code></pre>
       </div>
     ),
   },
@@ -145,21 +127,11 @@ export function Features() {
               <p class="text-sm text-base-content/70">
                 No import paths. No boilerplate. Your editor's HTML tooling works exactly as expected.
               </p>
-              <div class="bg-neutral rounded-box p-3 font-mono text-xs text-neutral-content mt-1 leading-relaxed">
-                <div class="text-neutral-content/40 mb-1">src/</div>
-                <div class="pl-3 text-neutral-content/40 mb-1">counter/</div>
-                <div class="pl-6 flex items-center gap-2">
-                  <span class="text-neutral-content/30">├─</span>
-                  <span class="text-neutral-content">counter</span><span class="text-accent">.rs</span>
-                </div>
-                <div class="pl-6 flex items-center gap-2">
-                  <span class="text-neutral-content/30">├─</span>
-                  <span class="text-neutral-content">counter</span><span class="text-secondary">.html</span>
-                </div>
-                <div class="pl-6 flex items-center gap-2">
-                  <span class="text-neutral-content/30">└─</span>
-                  <span class="text-neutral-content">counter</span><span class="text-primary">.css</span>
-                </div>
+              <div class="mockup-code text-xs mt-1">
+                <pre><code class="text-neutral-content/40">src/counter/</code></pre>
+                <pre><code>{"  ├─ counter"}<span class="text-accent">.rs</span></code></pre>
+                <pre><code>{"  ├─ counter"}<span class="text-secondary">.html</span></code></pre>
+                <pre><code>{"  └─ counter"}<span class="text-primary">.css</span></code></pre>
               </div>
             </div>
           </div>

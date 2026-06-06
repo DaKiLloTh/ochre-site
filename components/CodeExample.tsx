@@ -45,8 +45,8 @@ export function CodeExample() {
             <pre data-prefix=""><code>{"  gap: 1rem;"}</code></pre>
             <pre data-prefix=""><code>{"}"}</code></pre>
             <pre data-prefix=""><code></code></pre>
-            <pre data-prefix=""><code class="text-base-content/40">{"/* scoped automatically */"}</code></pre>
-            <pre data-prefix=""><code class="text-base-content/40">{"/* by ochre-macros */"}</code></pre>
+            <pre data-prefix=""><code class="text-neutral-content/40">{"/* scoped automatically */"}</code></pre>
+            <pre data-prefix=""><code class="text-neutral-content/40">{"/* by ochre-macros */"}</code></pre>
           </div>
         </div>
         <p class="text-center text-base-content/50 mt-6 text-sm">

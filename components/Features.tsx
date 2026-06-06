@@ -132,7 +132,7 @@ export function Features() {
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {/* Adjacent files — file browser card */}
+          {/* Adjacent files - file browser card */}
           <div class="card bg-base-200 border border-base-300 sm:col-span-2 lg:col-span-1">
             <div class="card-body gap-3">
               <div class="text-primary">

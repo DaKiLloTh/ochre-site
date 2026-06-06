@@ -16,12 +16,8 @@ export function Primitives() {
 
         {/* Readable primitives */}
         <div class="mt-10 mb-2">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-px flex-1 bg-base-300" />
-            <span class="text-xs font-mono text-base-content/40 uppercase tracking-widest">
-              implements Readable - use in {"{{ }}"}
-            </span>
-            <div class="h-px flex-1 bg-base-300" />
+          <div class="divider text-xs font-mono text-base-content/40 uppercase tracking-widest mb-4">
+            implements Readable - use in {"{{ }}"}
           </div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
@@ -127,12 +123,8 @@ export function Primitives() {
 
         {/* Structural primitives */}
         <div class="mt-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-px flex-1 bg-base-300" />
-            <span class="text-xs font-mono text-base-content/40 uppercase tracking-widest">
-              structural - async, mutations, lists
-            </span>
-            <div class="h-px flex-1 bg-base-300" />
+          <div class="divider text-xs font-mono text-base-content/40 uppercase tracking-widest mb-4">
+            structural - async, mutations, lists
           </div>
           <div class="grid sm:grid-cols-3 gap-4">
 

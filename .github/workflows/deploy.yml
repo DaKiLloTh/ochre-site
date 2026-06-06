@@ -1,36 +1,37 @@
-name: Deploy
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  deploy:
-    name: Deploy to Deno Deploy
-    runs-on: ubuntu-latest
-
-    permissions:
-      id-token: write # required for Deno Deploy OIDC auth
-      contents: read
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-
-      - name: Install node deps
-        run: deno install
-
-      - name: Build
-        run: deno task build
-
-      - name: Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "ochre-site"
-          entrypoint: "_fresh/server.js"
-          root: "."
+# Disabled until Deno Deploy project is configured.
+# name: Deploy
+#
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
+#
+# jobs:
+#   deploy:
+#     name: Deploy to Deno Deploy
+#     runs-on: ubuntu-latest
+#
+#     permissions:
+#       id-token: write # required for Deno Deploy OIDC auth
+#       contents: read
+#
+#     steps:
+#       - uses: actions/checkout@v4
+#
+#       - uses: denoland/setup-deno@v2
+#         with:
+#           deno-version: v2.x
+#
+#       - name: Install node deps
+#         run: deno install
+#
+#       - name: Build
+#         run: deno task build
+#
+#       - name: Deploy
+#         uses: denoland/deployctl@v1
+#         with:
+#           project: "ochre-site"
+#           entrypoint: "_fresh/server.js"
+#           root: "."
